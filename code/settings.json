@@ -1,0 +1,28 @@
+{
+    "workbench.colorTheme": "Catppuccin Latte",
+    "editor.fontSize": 18,
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "redhat.telemetry.enabled": false,
+    "workbench.iconTheme": "file-icons",
+    "eslint.run": "onSave",
+    "eslint.alwaysShowStatus": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.language": "en,pt,pt-BR",
+    "window.zoomLevel": 2,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "emulator.emulatorPath": "",
+    "emulator.emulatorPathLinux": "~/Android/Sdk/emulator",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.autoSave": "afterDelay"
+}
