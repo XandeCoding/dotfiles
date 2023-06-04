@@ -5,7 +5,7 @@ end
 
 configs.setup {
   ensure_installed = { "tsx", "css", "html", "javascript", "typescript", "python", "elixir", "erlang", "go" },
-  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+  sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
   autopairs = {
     enable = true,
   },

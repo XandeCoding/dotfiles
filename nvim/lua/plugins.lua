@@ -18,11 +18,11 @@ local use = packer.use
 packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  
+
   -- FuzzyFinder
   use {
   	'nvim-telescope/telescope.nvim',
-  	requires = { {'nvim-lua/plenary.nvim'} }
+  	requires = { {'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep', 'junegunn/fzf.vim'} }
   }
 
   -- Treesitter
@@ -35,21 +35,20 @@ packer.startup(function()
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  -- use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
   -- Snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  
+
   -- Themes
   use 'folke/tokyonight.nvim'
   use({
   	"catppuccin/nvim",
   	as = "catppuccin"
   })
-  
+
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
@@ -65,6 +64,14 @@ packer.startup(function()
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
+  use 'leoluz/nvim-dap-go'
+  use 'mfussenegger/nvim-dap-python'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+
   -- Others
   use {
     'kyazdani42/nvim-tree.lua',
@@ -74,4 +81,5 @@ packer.startup(function()
   }
   use "Pocco81/auto-save.nvim"
   use "akinsho/bufferline.nvim"
+  use 'rhysd/vim-grammarous'
 end)

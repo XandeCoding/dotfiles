@@ -30,9 +30,12 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Telescope
 keymap("n", "<c-f>", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<leader><c-t>", "<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending promp_position=top<CR>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>gl", "<cmd>Telescope diagnostics<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -44,3 +47,11 @@ keymap("n", "<leader>f", ":Format<cr>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-x>", ":bdelete<CR>", opts)
+
+-- Debug
+keymap("n", "<F5>", "<cmd>DapContinue<CR>", opts)
+keymap("n", "<F3>", "<cmd>DapStepOver<CR>", opts)
+keymap("n", "<F2>", "<cmd>DapStepInto<CR>", opts)
+keymap("n", "<F12>", "<cmd>DapStepOut<CR>", opts)
+keymap("n", "<leader>b", "<cmd>DapToggleBreakpoint<CR>", opts)
+
